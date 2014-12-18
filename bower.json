@@ -1,0 +1,23 @@
+{
+  "name": "functional-programming-talk",
+  "version": "0.0.1",
+  "homepage": "https://github.com/pahund/functional-programming-talk",
+  "authors": [
+    "Patrick Hund <pahund@ebay.com>"
+  ],
+  "description": "Code examples from my talk about functional programming in JavaScript",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "jquery": "~2.1.2"
+  }
+}

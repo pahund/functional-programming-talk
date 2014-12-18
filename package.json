@@ -1,0 +1,27 @@
+{
+  "name": "functional-programming-talk",
+  "version": "0.0.1",
+  "description": "Code examples from my talk about functional programming in JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pahund/functional-programming-talk.git"
+  },
+  "author": "Patrick Hund <pahund@team.mobile.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pahund/functional-programming-talk/issues"
+  },
+  "homepage": "https://github.com/pahund/functional-programming-talk",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-copy": "~0.7.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-jscs-checker": "~0.8.1"
+  }
+}

@@ -1,0 +1,29 @@
+body {
+    width: 3000px;
+}
+.stickyBox {
+    position: absolute;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 150px;
+    text-align:center;
+    padding: 15px;
+}
+.powderblue {
+    background-color: powderblue;
+}
+.lime {
+    background-color: lime;
+}
+.hotpink {
+    background-color: hotpink;
+}
+.left {
+    left: 0px;
+}
+.right {
+    right: 0px;
+}
+.center {
+    left: calc(50% - 75px);
+}
