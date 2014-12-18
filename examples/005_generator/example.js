@@ -5,12 +5,7 @@
 
     // Write a fromTo function that produces a generator that will produce values in a range.
 
-    function fromTo(from, to) {
-        var index = from;
-        return function () {
-            return index >= to ? undefined : index++;
-        };
-    }
+    /* TODO */
 
     var index = fromTo(0, 3);
 

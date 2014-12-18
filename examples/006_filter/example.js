@@ -13,15 +13,7 @@
         };
     }
 
-    function filter(genf, predf) {
-        return function () {
-            var value;
-            do {
-                value = genf();
-            } while (value !== undefined && !predf(value));
-            return value;
-        };
-    }
+    /* TODO */
 
     var fil = filter(fromTo(0, 5), function third(value) {
         return (value % 3) === 0;

@@ -13,13 +13,7 @@
         return a + b;
     }
 
-    function liftf(binaryf) {
-        return function (value1) {
-            return function (value2) {
-                return binaryf(value1, value2);
-            };
-        };
-    }
+    /* TODO */
 
     var addf = liftf(add);
 

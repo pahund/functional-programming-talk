@@ -13,11 +13,7 @@
         return a + b;
     }
 
-    function curry(binaryf, value1) {
-        return function (value2) {
-            return binaryf(value1, value2);
-        };
-    }
+    /* TODO */
 
     var add3 = curry(add, 3);
 

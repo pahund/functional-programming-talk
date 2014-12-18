@@ -13,11 +13,7 @@
         return a * b;
     }
 
-    function composeb(binaryf1, binaryf2) {
-        return function (a, b, c) {
-            return binaryf2(binaryf1(a, b), c);
-        };
-    }
+    /* TODO */
 
     util.log("composeb(add, mul)(2, 3, 7):", composeb(add, mul)(2, 3, 7)); // 35
 }());

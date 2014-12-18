@@ -9,21 +9,7 @@
         return a * b;
     }
 
-    function liftg(binary) {
-
-        return function (first) {
-            if (first === undefined) {
-                return first;
-            }
-            return function more(next) {
-                if (next === undefined) {
-                    return first;
-                }
-                first = binary(first, next);
-                return more;
-            };
-        };
-    }
+    /* TODO */
 
     util.log("liftg(mul)():", liftg(mul)()); // undefined
     util.log("liftg(mul)(3)():", liftg(mul)(3)()); // 3
