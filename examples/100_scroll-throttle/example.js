@@ -3,56 +3,40 @@
 (function () {
     "use strict";
 
-    function periodicChecker(predf, ms) {
-        return function checkf(callback) {
-            window.setTimeout(function () {
-                if (predf()) {
-                    callback();
-                    return;
-                }
-                checkf(callback);
-            }, ms);
-        };
-    }
-
-    function updater(updatef) {
-        var oldValue = updatef();
-        return function () {
-            var newValue = updatef();
-            if (oldValue !== newValue) {
-                oldValue = newValue;
-                return false;
+    function checkf(predf, callback, ms) {
+        window.setTimeout(function () {
+            if (predf()) {
+                callback();
+                return;
             }
-            return true;
-        };
-    }
-
-    function getScrollX() {
-        return $(document).scrollTop();
-    }
-
-    function getScrollY() {
-        return $(document).scrollLeft();
+            checkf(predf, callback, ms);
+        }, ms);
     }
 
     function afterScrollStops(func) {
         var ms = 100, // interval to perform the scroll position check
-            scrollPosChecker,
-            xUpdater = updater(getScrollX),
-            yUpdater = updater(getScrollY);
+            oldX = $(document).scrollLeft(),
+            oldY = $(document).scrollTop();
 
-        scrollPosChecker = periodicChecker(function () {
-            return xUpdater() &&  yUpdater();
-        }, ms);
-
-        (function startf() {
+        function startf() {
             $(document).one("scroll", function () {
-                scrollPosChecker(function () {
+                checkf(function () {
+                    var newX = $(document).scrollLeft(),
+                        newY = $(document).scrollTop(),
+                        stoppedScrolling = newX === oldX && newY === oldY;
+
+                    oldX = newX;
+                    oldY = newY;
+
+                    return stoppedScrolling;
+                }, function () {
                     func();
                     startf();
-                });
+                }, ms);
             });
-        }());
+        }
+
+        startf();
     }
 
     afterScrollStops(function () {
