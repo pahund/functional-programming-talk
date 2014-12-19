@@ -8,6 +8,14 @@ View the corresponding slides on [MindMeister](http://www.mindmeister.com/489584
 
 **Full credit for these code examples 001 to 006 goes to [Douglas Crockford](http://www.crockford.com/).**
 
+## Branches
+
+If you want to take a shot at solving Crockford's coding exercises yourself, after cloning the repository, check out
+branch `unsolved`.
+
+To see the progressive refactoring of the [scroll-throttle](examples/100_scroll-throttle/example.js) example I demonstrated
+during my talk, checkout out branches `step1`, `step2` and `step3` (`master` is the final version).
+
 ## Installation
 
 Prerequisites:
